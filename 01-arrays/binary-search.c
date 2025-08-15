@@ -4,17 +4,22 @@
 #include <stdio.h>
 
 int main() {
-    // sorted array
-    int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    printf("Enter a array to search: ");
-    scanf("%d", &arr[]);
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    int arr[100]; // Maximum array size of 100
+    printf("Enter %d sorted elements: ", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
     // define the mid, lower,upper,element_to_search
-    int size = sizeof(arr) / sizeof(arr[0]);
     int mid, lower = 0, upper = size - 1, element_to_search; // fixed upper bound to size-1
-    
+
     printf("Enter element to search: ");
     scanf("%d", &element_to_search);
-    
+
     int found = 0;
 
     // start the for loop
@@ -34,10 +39,10 @@ int main() {
             lower = mid + 1;
         }
     }
-    
+
     if (!found) {
         printf("Element %d not found in the array\n", element_to_search);
     }
-    
+
     return 0;
 }
