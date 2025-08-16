@@ -9,7 +9,7 @@ int main() {
     // Calculate array size dynamically
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    printf("Array before sorting is:\n");
+    printf("Array before descending sorting is:\n");
     for (i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
@@ -21,7 +21,7 @@ int main() {
     for (i = 0; i < size - 1; i++) {
         for (j = 0; j < size - 1 - i; j++) {
             // here the actual check will happen
-            if (arr[j] > arr[j+1]) {
+            if (arr[j] < arr[j+1]) {
                 temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
@@ -29,7 +29,7 @@ int main() {
         }
     }
 
-    printf("Array after sorting is:\n");
+    printf("Array after descending sorting is:\n");
     for (i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
