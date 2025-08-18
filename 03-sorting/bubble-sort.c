@@ -3,7 +3,7 @@
 
 int main() {
     // define the array, i,j & temp variable
-    int arr[] = {4,5,3,7,2,1,9,8,6}; // You can now add/remove elements freely
+    int arr[] = {9,8,7,6,5,4,3,2,1}; // You can now add/remove elements freely
     int i,j,temp;
 
     // Calculate array size dynamically
@@ -21,7 +21,7 @@ int main() {
     for (i = 0; i < size - 1; i++) {
         for (j = 0; j < size - 1 - i; j++) {
             // here the actual check will happen
-            if (arr[j] < arr[j+1]) {
+            if (arr[j] > arr[j+1]) {
                 temp = arr[j];
                 arr[j] = arr[j+1];
                 arr[j+1] = temp;
