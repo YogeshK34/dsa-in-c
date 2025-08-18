@@ -6,18 +6,17 @@
 
 int main() {
     int arr[] = {25,17,31,13,2};
-    // int size = sizeof(arr) / sizeof(arr[0]);
-
+    int size = sizeof(arr) / sizeof(arr[0]);
 
     printf("Before Sort:\n");
-    for (int i = 0; i <= 4; i++) {
+    for (int i = 0; i < size ; i++) {
         printf("%d ", arr[i]);
     }
 
     printf("\n");
 
-    for (int i = 0; i <= 3; i++) {
-        for (int j = i + 1; j <= 4; j++) {
+    for (int i = 0; i < size; i++) {
+        for (int j = i + 1; j < size; j++) {
             if (arr[i] > arr[j]) {
                 int temp = arr[i];
                 arr[i] = arr[j];

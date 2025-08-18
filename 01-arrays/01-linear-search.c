@@ -7,7 +7,7 @@ int main() {
     // sorted array
     int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     printf("Enter a array to search: ");
-    scanf("%d", &arr[]);
+    scanf("%d", &arr[i]);
     // define the mid, lower,upper,element_to_search
     int size = sizeof(arr) / sizeof(arr[0]);
     int mid, lower = 0, upper = size - 1, element_to_search; // fixed upper bound to size-1
