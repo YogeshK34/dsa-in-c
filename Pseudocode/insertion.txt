@@ -1,0 +1,30 @@
+BEGIN
+    array ← [9,8,7,6,5,4,3,2,1]
+    size  ← length(array)
+
+    PRINT "Array before insertion sort"
+    FOR each element e IN array
+        PRINT e
+    END FOR
+
+    FOR i ← 1 TO size-1            // outer loop: current element to insert
+        FOR j ← 0 TO i-1           // find position where array[i] fits
+            IF array[j] > array[i] THEN
+                temp ← array[j]
+                array[j] ← array[i]
+
+                // shift elements one step to the right
+                FOR k ← i DOWNTO j+1
+                    array[k] ← array[k-1]
+                END FOR
+
+                array[k+1] ← temp   // place saved value
+            END IF
+        END FOR
+    END FOR
+
+    PRINT "Array after insertion sort"
+    FOR each element e IN array
+        PRINT e
+    END FOR
+END
