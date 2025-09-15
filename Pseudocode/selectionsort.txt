@@ -1,0 +1,21 @@
+BEGIN
+    arr ← [64,62,60,58,56,54,52,50]
+    size ← length of arr
+
+    PRINT "Array before selection sort:"
+    FOR each element in arr
+        PRINT element
+
+    // selection sort
+    FOR i ← 0 TO size - 1
+        FOR j ← i + 1 TO size - 1
+            IF arr[i] > arr[j] THEN
+                SWAP arr[i] and arr[j]
+            ENDIF
+        ENDFOR
+    ENDFOR
+
+    PRINT "Array after selection sort:"
+    FOR each element in arr
+        PRINT element
+END
